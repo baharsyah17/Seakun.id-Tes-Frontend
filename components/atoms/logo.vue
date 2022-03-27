@@ -1,6 +1,6 @@
 <template>
   <div>
-    <a href="/"><h1>Seakun.id</h1></a>
+    <a href="/Seakun.id-Tes-Frontend/"><h1>Seakun.id</h1></a>
   </div>
 </template>
 

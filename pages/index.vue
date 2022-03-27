@@ -133,7 +133,7 @@ export default {
   margin-top: 2px;
   margin-bottom: 2px;
   height: 60px;
-  background-color: rgb(85, 204, 182);
+  background-color: rgb(108, 133, 216);
 }
 .mid-page {
   display: flex;
@@ -141,10 +141,10 @@ export default {
 }
 .left-page {
   width: 17%;
-  background-color: rgb(85, 204, 182);
+  background-color: rgb(91, 154, 214);
 }
 .right-page {
   width: 83%;
-  background-color: rgb(174, 243, 218);
+  background-color: rgb(222, 240, 245);
 }
 </style>

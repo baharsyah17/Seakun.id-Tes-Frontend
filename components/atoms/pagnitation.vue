@@ -43,7 +43,6 @@ export default {
   float: right;
   margin-right: 25px;
   padding: 10px 5px;
-  border: 2px solid black;
   border-radius: 10px;
 }
 .pagination a {
