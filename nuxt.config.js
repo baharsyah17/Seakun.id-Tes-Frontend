@@ -32,7 +32,7 @@ export default {
     "@nuxtjs/tailwindcss",
   ],
 
-  router: { base: "Seakun.id-Tes-Frontend/" },
+  router: { base: "/Seakun.id-Tes-Frontend/" },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
