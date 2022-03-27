@@ -99,6 +99,8 @@ h3 {
   color: white;
   border: 1px solid rgb(41, 206, 165);
   border-radius: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
   cursor: pointer;
 }
 select {

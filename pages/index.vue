@@ -47,6 +47,7 @@ export default {
       limit: 5,
       total: 0,
       inputSearch: "",
+      value: "",
       selectedOption: 1,
       sortOption: [
         {
@@ -117,7 +118,7 @@ export default {
         (d) => search.test(d.personalAccount.email) || search.test(d.orderId)
       );
       this.total = Math.ceil(this.dataAkun.length / this.limit);
-      this.getCurrentPage(this.page, this.limit);
+      this.getCurrentPage(1, this.limit);
     },
   },
 };
