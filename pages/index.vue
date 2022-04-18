@@ -70,7 +70,7 @@ export default {
   },
   methods: {
     getDataFromTes() {
-      var api = "http://demo3267455.mockable.io/order";
+      var api = "https://demo3267455.mockable.io/order";
       axios
         .get(api)
         .then((res) => {
