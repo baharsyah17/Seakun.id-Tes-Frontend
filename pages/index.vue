@@ -137,7 +137,6 @@ export default {
 }
 .mid-page {
   display: flex;
-  height: 100vh;
 }
 .left-page {
   width: 17%;

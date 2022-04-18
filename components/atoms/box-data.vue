@@ -22,12 +22,10 @@
           </div>
           <div class="info-data">
             <div>: {{ dataAkun.provider }}</div>
-            <div>: {{ dataAkun.paket }}</div>
+            <div>: {{ dataAkun.packet }}</div>
             <div>: Exp {{ dateString(dataAkun.expired) }}</div>
           </div>
-          <div class="price-data">
-            Rp {{ setCurrency(dataAkun.payment.paymentTotal) }}
-          </div>
+          <div class="price-data">Rp {{ dataAkun.payment.paymentTotal }}</div>
         </div>
       </div>
     </div>
@@ -56,12 +54,10 @@
             </div>
             <div class="info-data">
               <div>: {{ dataAkun.provider }}</div>
-              <div>: {{ dataAkun.paket }}</div>
+              <div>: {{ dataAkun.packet }}</div>
               <div>: Exp {{ dateString(dataAkun.expired) }}</div>
             </div>
-            <div class="price-data">
-              Rp {{ setCurrency(dataAkun.payment.paymentTotal) }}
-            </div>
+            <div class="price-data">Rp {{ dataAkun.payment.paymentTotal }}</div>
           </div>
         </div>
       </div>
@@ -76,7 +72,7 @@
           <div>: {{ dataAkun.voucherCode }}</div>
           <div>: {{ dataAkun.payment.status }}</div>
           <div>: {{ dateString(dataAkun.payment.paymentDate) }}</div>
-          <div>: {{ dataAkun.payment.name }}</div>
+          <div>: {{ dataAkun.payment.bank }}</div>
         </div>
       </div>
       <div class="btn-closeDetail">
@@ -103,17 +99,13 @@ export default {
   },
   methods: {
     dateString(value) {
-      const oldDate = value.slice(0, 10);
+      const oldDate = value;
       const newDate = new Date(oldDate).toLocaleString("id-ID", {
-        weekday: "short",
         day: "numeric",
         month: "long",
         year: "numeric",
       });
-      return newDate.slice(5, 22);
-    },
-    setCurrency(price) {
-      return price.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+      return newDate;
     },
 
     showDetail() {
