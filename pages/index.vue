@@ -16,7 +16,7 @@
           @changeSorting="changeSorting"
         />
         <div class="page-box">
-          <pagnitation
+          <Pagnitation
             :page="page"
             :total="total"
             @previous="previous"
