@@ -31,12 +31,12 @@
 
 <script>
 import axios from "axios";
-import logo from "../components/atoms/logo.vue";
+import Logo from "../components/atoms/logo.vue";
 import Sidebar from "../components/mollecules/sidebar.vue";
 import Mainbar from "../components/mollecules/mainbar.vue";
 import Pagnitation from "../components/atoms/pagnitation.vue";
 export default {
-  components: { logo, Sidebar, Mainbar, Pagnitation },
+  components: { Sidebar, Mainbar, Pagnitation, Logo },
   data() {
     return {
       dataAkun: [],
@@ -133,17 +133,17 @@ export default {
   margin-top: 2px;
   margin-bottom: 2px;
   height: 60px;
-  background-color: rgb(108, 133, 216);
+  background-image: linear-gradient(135deg, #65fdf0 10%, #1d6fa3 100%);
 }
 .mid-page {
   display: flex;
 }
 .left-page {
   width: 17%;
-  background-color: rgb(91, 154, 214);
+  background-image: linear-gradient(135deg, #65fdf0 10%, #1d6fa3 100%);
 }
 .right-page {
   width: 83%;
-  background-color: rgb(222, 240, 245);
+  background-image: linear-gradient(135deg, #65fdf0 10%, #1d6fa3 100%);
 }
 </style>

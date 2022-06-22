@@ -120,7 +120,7 @@ export default {
 
 <style>
 .container {
-  background-color: whitesmoke;
+  background-image: linear-gradient(135deg, #90f7ec 10%, #32ccbc 100%);
   border: 3px solid rgb(41, 206, 165);
   border-radius: 10px;
   cursor: pointer;

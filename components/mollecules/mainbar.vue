@@ -6,11 +6,13 @@
     <div class="search-page">
       <div class="search-btn">
         <input
+          required
           class="search-input"
           type="text"
+          id="search-name"
           v-model="inputVal"
-          placeholder="Search By Name/Email/Order id"
         />
+        <label for="search-name" class="input-label">Name/Email/Order id</label>
         <button class="search-button" @click="$emit('search')">Submit</button>
       </div>
       <div class="form-btn">
@@ -86,16 +88,9 @@ h3 {
   display: flex;
   justify-content: space-between;
 }
-.search-input {
-  margin-top: 5px;
-  padding-left: 10px;
-  width: 350px;
-  margin-right: 3px;
-  border: 1px solid rgb(41, 206, 165);
-  border-radius: 5px;
-}
 .search-button {
-  background: rgb(41, 206, 165);
+  margin-left: 10px;
+  background-image: linear-gradient(135deg, #90f7ec 10%, #32ccbc 100%);
   color: white;
   border: 1px solid rgb(41, 206, 165);
   border-radius: 5px;
@@ -110,11 +105,45 @@ select {
   margin-right: 50px;
 }
 .search-btn {
-  display: inline-block;
-  line-height: 30px;
+  position: relative;
+  display: flex;
+}
+.search-input {
+  width: clamp(100px, 75%, 400px);
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font: inherit;
+  color: black;
+  caret-color: rgb(41, 206, 165);
+  background-color: transparent;
+  outline: 2px solid rgb(41, 206, 165);
+}
+.input-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(10px, 10px);
+  transition: transform 0.25s;
+}
+.search-input:focus + .input-label,
+.search-input:valid + .input-label {
+  transform: translate(10px, -14px) scale(0.8);
+  color: rgb(41, 206, 165);
+  padding-inline: 5px;
+  background-color: #65fdf0;
+}
+.search-input:is(:focus, :valid) {
+  outline-color: rgb(41, 206, 165);
 }
 .form-btn {
   display: inline-block;
+}
+select {
+  background-image: linear-gradient(135deg, #90f7ec 10%, #32ccbc 100%);
+}
+select option {
+  background-image: linear-gradient(135deg, #90f7ec 10%, #32ccbc 100%);
 }
 .data-list {
   margin-top: 20px;
